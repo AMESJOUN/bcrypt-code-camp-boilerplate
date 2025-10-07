@@ -10,11 +10,11 @@ const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
 
+app.get('/',(req,res) => {
+    res.send("Hello World");
+});
+
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
-
-//END_ASYNC
-
-//START_SYNC
 
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
   console.log(hash);
@@ -23,6 +23,12 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
     console.log(res); //true
   });
 });
+
+//END_ASYNC
+
+//START_SYNC
+
+
 
 
 //END_SYNC
