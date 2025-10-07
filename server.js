@@ -13,8 +13,9 @@ const someOtherPlaintextPassword = 'pass123';
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 
 bcrypt.hash(myPlaintextPassword,saltRounds,(err,hash) => {
-    bcrypt.compare(someOtherPlaintextPassword,hash,(err,res) =>{
-        console.log(res)
+        console.log(hash);
+    bcrypt.compare(myPlaintextPassword,hash,(err,res) =>{
+        console.log(res);
 }); 
 });
 
